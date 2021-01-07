@@ -7,14 +7,11 @@ let vapidKeys={
 
 push.setVapidDetails('mailto:foran.paul@gmail.com',vapidKeys.privateKey,vapidKeys.privateKey)
 let sub = {
-    endpoint:
-    'https://fcm.googleapis.com/fcm/send/fadD29MSdFQ:APA91bGnqQy4sZbpIyPd59-9zI5GTXXqJ2lpZaNvGjylTZa0IO1bQo3kos_MtHCbhm-4xvRnSzlBYFk4cMaucx0gUFIhZ8zuPutsCQLosEfSZTNcErqGN2TmU2L4HhmRg4yJBGmJkWcg',
+    endpoint:'https://fcm.googleapis.com/fcm/send/fadD29MSdFQ:APA91bGnqQy4sZbpIyPd59-9zI5GTXXqJ2lpZaNvGjylTZa0IO1bQo3kos_MtHCbhm-4xvRnSzlBYFk4cMaucx0gUFIhZ8zuPutsCQLosEfSZTNcErqGN2TmU2L4HhmRg4yJBGmJkWcg',
     expirationTime: null,
     keys:{
-        p256dh:
-        'BMejvbeIv4solpw8Ah2EO1UMsOwimsjp5R6i8_OjRTus_lagg5o4Na0fl7usgypEqdmP1w5dTPB00ewbpqedQ50',
+        p256dh:'BMejvbeIv4solpw8Ah2EO1UMsOwimsjp5R6i8_OjRTus_lagg5o4Na0fl7usgypEqdmP1w5dTPB00ewbpqedQ50',
         auth:'2K6POW363RkhbhLZ7RntTQ'
-}
-};
+    }};
 
 push.sendNotification(sub, 'test message')
