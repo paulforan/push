@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device, inital-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <title>Document</title>
+    </head>
+    <body>
+        <button onclick="subscribe()">Subscribe</button>
+        <script>
+            addEventListener('load', async ()=>{
+                let sw = await navigator.serviceWorker.register('./sq.js')
+                console.log(sw)
+            })
+
+            async function subscribe() {
+                let sw = await navigator.serviceWorker.ready;
+                let push = await sw.pushManager.subscribe({
+                  userVisibleOnly = true,
+                  applocationServerKey: 'Todo!!'  
+                })
+                console.log(JSON.stringify(push))
+            }
+        </script>
+    </body>
+</html>
